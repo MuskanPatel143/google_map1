@@ -120,7 +120,7 @@ class _MapScreenState extends State<MapScreen> {
   Map<PolylineId, Polyline> polylines = {};
   List<LatLng> polylineCoordinates = [];
   PolylinePoints polylinePoints = PolylinePoints();
-  String googleAPiKey = "AIzaSyBD5afwWxQ1MpJ1TlDjZjIVLZ1VI-y4Xos";
+  String googleAPiKey = "AIzaSyBbIz-Ck2_6s2I7JgplxNGznr6x6fjqouE";
 
   @override
   void initState() {
@@ -144,11 +144,13 @@ class _MapScreenState extends State<MapScreen> {
         initialCameraPosition: CameraPosition(
             target: LatLng(_originLatitude, _originLongitude), zoom: 15),
         myLocationEnabled: true,
-        tiltGesturesEnabled: true,
+        // tiltGesturesEnabled: true,
         compassEnabled: true,
-        scrollGesturesEnabled: true,
-        zoomGesturesEnabled: true,
+        // scrollGesturesEnabled: true,
+        // zoomGesturesEnabled: true,
         onMapCreated: _onMapCreated,
+        mapToolbarEnabled: false,
+        indoorViewEnabled: true,
         markers: Set<Marker>.of(markers.values),
         polylines: Set<Polyline>.of(polylines.values),
       )),
